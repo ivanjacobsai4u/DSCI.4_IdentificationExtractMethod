@@ -15,7 +15,8 @@ In order to evaluate our work we define a set of research questions:
 RQ1: How does our model perform compared to a machine learning baseline model?
 RQ2: How does our model perform compared to other models?
 
-#Bibliography
+## Bibliography
+
 [1]	C. V. Lopes et al., “DéjàVu: a map of code duplicates on GitHub,” Proc. ACM Program. Lang., vol. 1, no. OOPSLA, p. 84:1-84:28, Oct. 2017, doi: 10.1145/3133908.
 [2]	“The adverse effects of code duplication in machine learning models of code | Proceedings of the 2019 ACM SIGPLAN International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software.” https://dl.acm.org/doi/10.1145/3359591.3359735 (accessed Aug. 27, 2022).
 [3]	“Cross-project code clones in GitHub | Semantic Scholar.” https://www.semanticscholar.org/paper/Cross-project-code-clones-in-GitHub-Gharehyazie-Ray/5812937e05870571ff3cd1bb6c31029372305dac (accessed Aug. 27, 2022).
