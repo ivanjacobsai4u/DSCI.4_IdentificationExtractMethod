@@ -14,6 +14,26 @@ The model, consisting of a Batch Normalization layer, 1D Convolutional layer, 1D
 In order to evaluate our work we define a set of research questions:
 RQ1: How does our model perform compared to a machine learning baseline model?
 RQ2: How does our model perform compared to other models?
+## Install
+### Create anaconda environment
+    conda create --name myenv
+### Activate environment
+    activate myenv
+### Activate environment (Windows)
+    source activate myenv
+### Install packages
+Install the needed packages from requirements.txt
+
+    pip install -r requirements.txt
+### Data
+Copy folders train,test in the data folder
+### Train model
+    python train_pipe.py
+### Tensorboard 
+To visualize metrics training activate env in another cmd
+
+    tensorboard -logdir runs
+
 
 ## Bibliography
 
