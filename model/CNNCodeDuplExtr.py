@@ -29,8 +29,9 @@ class CNNCodeDuplExt(torch.nn.Module):
         self.conv = nn.Conv1d(78, 32, 1, stride=2)
         self.deconv = nn.ConvTranspose1d(32,242,kernel_size=1)
         self.maxpool =  nn.MaxPool1d(2, stride=2)
-        self.dropout=nn.Dropout(p=0.21)
-        self.dense=nn.Linear(121, 2)
+        self.dropout=nn.Dropout(p=0.215)
+        self.dense1 = nn.Linear(121, 80)
+        self.dense=nn.Linear(80, 2)
 
     def forward(self, x):
         x=torch.reshape(x, list(x.shape) + [-1])
@@ -40,5 +41,7 @@ class CNNCodeDuplExt(torch.nn.Module):
         x=torch.reshape(x,(-1,242))
         x=F.relu(self.maxpool(x))
         x=self.dropout(x)
-        x=F.relu(self.dense(x))
+        x = F.sigmoid(self.dense1(x))
+
+        x=  F.sigmoid(self.dense(x))
         return x

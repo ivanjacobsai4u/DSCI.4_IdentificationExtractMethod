@@ -6,6 +6,7 @@ import numpy as np
 class CodeSnippetsDataset(Dataset):
 
     def __init__(self, file_names):
+
         pos_df = pd.read_csv(file_names[0],delimiter=';')
         neg_df = pd.read_csv(file_names[1], delimiter=';')
         if 'otalLinesOfCode' in pos_df.columns:
@@ -23,12 +24,15 @@ class CodeSnippetsDataset(Dataset):
         g = conc_df.groupby('label')
         conc_df=g.apply(lambda x: x.sample(g.size().min()).reset_index(drop=True))
 
-        x = conc_df.iloc[:, 0:78].values
-        y = conc_df.iloc[:, 80].values
-
-        self.x_train = torch.tensor(x, dtype=torch.float32)
-        self.y_train = torch.tensor(y, dtype=torch.long)
-
+        self.x = conc_df.iloc[:, 0:78].values
+        self.y = conc_df.iloc[:, 80].values
+        self.x_train = torch.tensor(self.x, dtype=torch.float32)
+        self.y_train = torch.tensor(self.y, dtype=torch.long)
+    def get_all_data(self,model_type='cnn'):
+        if model_type=='cnn':
+            return torch.tensor(self.x, dtype=torch.float32),torch.tensor(self.y, dtype=torch.long)
+        else:
+            return self.x,self.y
     def __len__(self):
         return len(self.y_train)
 

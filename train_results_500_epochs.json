@@ -1,0 +1,37 @@
+{
+  "Random Forest": {
+    "accuracy": 0.92,
+    "precision": 0.92,
+    "recall": 0.92,
+    "auc": 0.94,
+    "f1_sc": 0.92
+  },
+  "Support Vector Machine": {
+    "accuracy": 0.54,
+    "precision": 0.71,
+    "recall": 0.54,
+    "auc": 0.76,
+    "f1_sc": 0.43
+  },
+  "Naive Bayes": {
+    "accuracy": 0.54,
+    "precision": 0.59,
+    "recall": 0.54,
+    "auc": 0.74,
+    "f1_sc": 0.48
+  },
+  "Logistic Regression": {
+    "accuracy": 0.63,
+    "precision": 0.64,
+    "recall": 0.63,
+    "auc": 0.74,
+    "f1_sc": 0.63
+  },
+  "Convolutional Neural Network": {
+    "accuracy": 0.84,
+    "precision": 0.84,
+    "recall": 0.84,
+    "auc": 0.88,
+    "f1_sc": 0.84
+  }
+}
