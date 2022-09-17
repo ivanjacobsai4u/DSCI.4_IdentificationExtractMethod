@@ -1,0 +1,47 @@
+{
+  "train": {
+    "csv_path_neg_test": "data/test/negatives_20p.csv",
+    "csv_path_pos_test": "data/test/positives_20p.csv",
+    "csv_path_neg": "data/train/negatives_80p.csv",
+    "csv_path_pos": "data/train/positives_80p.csv",
+    "names_models": {
+      "rf": "Random Forest",
+      "sgd": "Support Vector Machine",
+      "gnb": "Naive Bayes",
+      "lrc": "Logistic Regression",
+      "cnn": "Convolutional Neural Network"
+    },
+    "type_to_implementation":[  "rf",
+    "sgd",
+    "gnb",
+    "lrc",
+    "cnn"],
+
+
+    "nr_epochs": 500
+  },
+  "statistics": {
+    "csv_path_neg_test": "data/test/negatives_20p.csv",
+    "csv_path_pos_test": "data/test/positives_20p.csv",
+    "csv_path_neg": "data/train/negatives_80p.csv",
+    "csv_path_pos": "data/train/positives_80p.csv",
+    "names_models": {
+      "cnn": "Convolutional Neural Network",
+      "rf": "Random Forest",
+      "sgd": "Support Vector Machine",
+      "gnb": "Naive Bayes",
+      "lrc": "Logistic Regression"
+
+    },
+    "type_to_implementation":[
+       "cnn",
+    "rf",
+    "sgd",
+    "gnb",
+    "lrc"
+
+    ],
+    "nr_epochs": 500,
+    "nr_iterations": 10
+  }
+}
