@@ -1,0 +1,242 @@
+{
+  "Convolutional Neural Network_Random Forest": {
+    "model_1": "Convolutional Neural Network",
+    "model_2": "Random Forest",
+    "model_pairs": [
+      "Convolutional Neural Network",
+      "Random Forest"
+    ],
+    "chi-squared": 3374.0691476872507,
+    "p-value": 0.0,
+    "oddsratio": 13.84,
+    "oddsratios": [
+      17.870418172431595,
+      17.746911211725884,
+      17.119332907636256,
+      18.01125411320314,
+      13.840690611698312,
+      17.167109779088317,
+      17.709737771806736,
+      14.513966197753264,
+      16.379042407660737,
+      14.536599763872491
+    ],
+    "pvalue": 0.0
+  },
+  "Convolutional Neural Network_Support Vector Machine": {
+    "model_1": "Convolutional Neural Network",
+    "model_2": "Support Vector Machine",
+    "model_pairs": [
+      "Convolutional Neural Network",
+      "Support Vector Machine"
+    ],
+    "chi-squared": 9112.778425538758,
+    "p-value": 0.0,
+    "oddsratio": 0.98,
+    "oddsratios": [
+      0.9824705809725108,
+      3.012112997817785,
+      1.5944487937354668,
+      1.5023029805548052,
+      1.827388694778933,
+      2.974905324250437,
+      2.885087819997704,
+      1.9828425909475125,
+      1.499626730776183,
+      1.1155246737397397
+    ],
+    "pvalue": 0.0
+  },
+  "Convolutional Neural Network_Naive Bayes": {
+    "model_1": "Convolutional Neural Network",
+    "model_2": "Naive Bayes",
+    "model_pairs": [
+      "Convolutional Neural Network",
+      "Naive Bayes"
+    ],
+    "chi-squared": 11284.878195972004,
+    "p-value": 0.0,
+    "oddsratio": 1.1,
+    "oddsratios": [
+      1.3564095883272538,
+      1.1621227887617065,
+      1.1760452790682459,
+      1.539794766043109,
+      1.3708948777748986,
+      1.0997993720297101,
+      1.193060288721293,
+      1.4810950361056405,
+      1.286626016093022,
+      1.512177398452253
+    ],
+    "pvalue": 0.0
+  },
+  "Convolutional Neural Network_Logistic Regression": {
+    "model_1": "Convolutional Neural Network",
+    "model_2": "Logistic Regression",
+    "model_pairs": [
+      "Convolutional Neural Network",
+      "Logistic Regression"
+    ],
+    "chi-squared": 6444.314794602104,
+    "p-value": 0.0,
+    "oddsratio": 2.76,
+    "oddsratios": [
+      3.4280845967004003,
+      3.4549774739785613,
+      3.1363771616607155,
+      3.637062670666082,
+      3.3440391290441047,
+      2.759215362110953,
+      2.998461074485686,
+      3.1289436472302086,
+      2.7769286355288423,
+      3.03432415412894
+    ],
+    "pvalue": 0.0
+  },
+  "Random Forest_Support Vector Machine": {
+    "model_1": "Random Forest",
+    "model_2": "Support Vector Machine",
+    "model_pairs": [
+      "Random Forest",
+      "Support Vector Machine"
+    ],
+    "chi-squared": 16828.98219620509,
+    "p-value": 0.0,
+    "oddsratio": 0.84,
+    "oddsratios": [
+      0.8370430691277597,
+      3.465403551960612,
+      2.0734878553429246,
+      1.7377732853875716,
+      2.0598438024052514,
+      3.3913256072749345,
+      3.2742373670728866,
+      2.5674633229543606,
+      2.2948903586010774,
+      1.1893591729613946
+    ],
+    "pvalue": 0.0
+  },
+  "Random Forest_Naive Bayes": {
+    "model_1": "Random Forest",
+    "model_2": "Naive Bayes",
+    "model_pairs": [
+      "Random Forest",
+      "Naive Bayes"
+    ],
+    "chi-squared": 19506.460252113087,
+    "p-value": 0.0,
+    "oddsratio": 1.6,
+    "oddsratios": [
+      1.8018709684682148,
+      1.685999318839757,
+      1.7637147048038138,
+      1.755021216407355,
+      1.7464074847851758,
+      1.7766282405439864,
+      1.6978160272353373,
+      1.8418632170615603,
+      1.7603005747597713,
+      1.5981961607106363
+    ],
+    "pvalue": 0.0
+  },
+  "Random Forest_Logistic Regression": {
+    "model_1": "Random Forest",
+    "model_2": "Logistic Regression",
+    "model_pairs": [
+      "Random Forest",
+      "Logistic Regression"
+    ],
+    "chi-squared": 13681.999269290725,
+    "p-value": 0.0,
+    "oddsratio": 3.24,
+    "oddsratios": [
+      3.914164571913141,
+      3.502074596852374,
+      3.515583064949007,
+      3.657819549733184,
+      3.6375006407299195,
+      3.5933094426579983,
+      3.6642613283674734,
+      3.6244207167974665,
+      3.2420276457836668,
+      3.3915959161741
+    ],
+    "pvalue": 0.0
+  },
+  "Support Vector Machine_Naive Bayes": {
+    "model_1": "Support Vector Machine",
+    "model_2": "Naive Bayes",
+    "model_pairs": [
+      "Support Vector Machine",
+      "Naive Bayes"
+    ],
+    "chi-squared": 318.41738345088595,
+    "p-value": 0.0,
+    "oddsratio": 0.05,
+    "oddsratios": [
+      0.046045991983269655,
+      0.7884096101917885,
+      17.367113708405142,
+      7.7743871046251485,
+      5.206927222309423,
+      0.40048164735371994,
+      0.44043317861156794,
+      19.221204188481675,
+      29.187863372093023,
+      35.41851128472222
+    ],
+    "pvalue": 0.0
+  },
+  "Support Vector Machine_Logistic Regression": {
+    "model_1": "Support Vector Machine",
+    "model_2": "Logistic Regression",
+    "model_pairs": [
+      "Support Vector Machine",
+      "Logistic Regression"
+    ],
+    "chi-squared": 644.0166136954638,
+    "p-value": 0.0,
+    "oddsratio": 1.08,
+    "oddsratios": [
+      1.0818675160455982,
+      9.058858123009067,
+      3.5093153116541553,
+      3.3776875169239102,
+      5.431544699245816,
+      8.47231365821405,
+      5.525841538359876,
+      3.924021844187975,
+      3.0843706936150665,
+      1.2029971552972978
+    ],
+    "pvalue": 0.0
+  },
+  "Naive Bayes_Logistic Regression": {
+    "model_1": "Naive Bayes",
+    "model_2": "Logistic Regression",
+    "model_pairs": [
+      "Naive Bayes",
+      "Logistic Regression"
+    ],
+    "chi-squared": 1565.0631153846155,
+    "p-value": 0.0,
+    "oddsratio": 1.79,
+    "oddsratios": [
+      1.7900378973189803,
+      1.7900378973189803,
+      1.7900378973189803,
+      1.7900378973189803,
+      1.7900378973189803,
+      1.7900378973189803,
+      1.7900378973189803,
+      1.7900378973189803,
+      1.7900378973189803,
+      1.7900378973189803
+    ],
+    "pvalue": 0.0
+  }
+}
