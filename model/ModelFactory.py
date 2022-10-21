@@ -4,7 +4,7 @@ from sklearn.model_selection import GridSearchCV, StratifiedKFold
 from sklearn.naive_bayes import ComplementNB, GaussianNB
 from sklearn.neural_network import MLPClassifier
 
-from model.CNNCodeDuplExtr import CNNCodeDuplExt
+from model.CNNCodeDuplExtr import CNNCodeDuplExt, AttU_Net, CNNCodeDuplExtResUnet, CNNCodeDuplExtResUnetAtt
 
 
 class ModelFactory:
@@ -22,6 +22,9 @@ class ModelFactory:
             'mlp': MLPClassifier,
             'cnb': ComplementNB,
             'gbc': GradientBoostingClassifier,
+            "CNNCodeDuplExtResUnet":CNNCodeDuplExtResUnet,
+            "CNNCodeDuplExtResUnetAtt":CNNCodeDuplExtResUnetAtt,
+            "AttU_Net":AttU_Net
 
         }
         implementation = type_to_implementation.get(model_type, None)

@@ -2,6 +2,7 @@
 from pprint import pprint
 import json
 
+from numpy import ndarray
 from torch.utils.data import DataLoader
 import logging
 import torch
@@ -36,12 +37,15 @@ class ModelTrainer(object):
         self.test_loader = DataLoader(self.codeSnippetDs_test, batch_size=256, shuffle=True);
 
         logging.basicConfig(filename='training.log', encoding='utf-8', level=verbosity)
-    def _train_cnn_model(self,model, nr_epochs, train_loader, test_loader):
+    def _train_cnn_model(self,model, nr_epochs, train_loader, test_loader,model_type):
         # Writer will output to ./runs/ directory by default
 
         model = model.to(self.device)
         criterion = torch.nn.CrossEntropyLoss()
-        optimizer = torch.optim.Adam(model.parameters(), lr=0.01)
+        optimizer = torch.optim.Adam(model.parameters(), lr=0.1)
+        optimizer = torch.optim.SGD(model.parameters(),  lr = 0.1, momentum = 0.9)
+
+
         for epoch in range(nr_epochs):
             running_loss = 0.0
             running_acc = 0.0
@@ -63,6 +67,7 @@ class ModelTrainer(object):
                 # Compute and print loss
                 loss = criterion(y_pred, y_train)
                 loss.backward()
+                #torch.nn.utils.clip_grad_norm_(model.parameters(), 1)
                 optimizer.step()
                 y_pred_test = model(test_data)
                 loss_test = criterion(y_pred_test, y_test)
@@ -75,10 +80,10 @@ class ModelTrainer(object):
 
                     logging.info(f'[{epoch + 1}, {i + 1:5d}] loss: {running_loss / 10:.3f}')
                     logging.info(f'[{epoch + 1}, {i + 1:5d}] accuracy: {running_acc / 10:.3f}')
-                    self.writer.add_scalar('Loss/train', running_loss / 10, epoch + 1)
-                    self.writer.add_scalar('Accuracy/train', running_acc / 10, epoch + 1)
-                    self.writer.add_scalar('Loss/test', running_loss_test / 10, epoch + 1)
-                    self.writer.add_scalar('Accuracy/test', running_acc_test / 10, epoch + 1)
+                    self.writer.add_scalar('Loss/train {}'.format(model_type), running_loss / 10, epoch + 1)
+                    self.writer.add_scalar('Accuracy/train {}'.format(model_type), running_acc / 10, epoch + 1)
+                    self.writer.add_scalar('Loss/test {}'.format(model_type), running_loss_test / 10, epoch + 1)
+                    self.writer.add_scalar('Accuracy/test {}'.format(model_type), running_acc_test / 10, epoch + 1)
                     running_loss = 0.0
                     running_acc = 0.0
                     running_loss_test = 0.0
@@ -105,20 +110,22 @@ class ModelTrainer(object):
         return model
     def train(self,nr_epochs,persist_results=True):
         train_results = {}
-
+        predictions={}
         for model_type in self.type_to_implementation:
             model = self.model_factory.make_model(model_type)
             logging.info(model_type)
 
-            if model_type == "cnn":
-                model = self._train_cnn_model(model, nr_epochs, self.train_loader, self.test_loader)
+            if model_type in ["cnn" ,'CNNCodeDuplExtResUnet','AttU_Net','CNNCodeDuplExtResUnetAtt']:
+                model = self._train_cnn_model(model, nr_epochs, self.train_loader, self.test_loader,model_type)
                 X_test, y_true_test = self.codeSnippetDs_test.get_all_data(model_type=model_type)
+
                 X_test = X_test.to(self.device)
                 y_pred_test = model(X_test)
                 y_pred_test = torch.argmax(y_pred_test, -1)
 
                 metrics = self._calc_metrics(y_pred_test.cpu().detach().numpy(), y_true_test.cpu().detach().numpy())
-                train_results[self.names_models[model_type]] = {'metrics': metrics, 'y_pred_test': y_pred_test.cpu().detach().numpy().tolist(),
+                train_results[self.names_models[model_type]] = {'metrics': metrics}
+                predictions[self.names_models[model_type]]={'y_pred_test': y_pred_test.cpu().detach().numpy().tolist(),
                                                                 'y_true_test': y_true_test.cpu().detach().numpy().tolist()}
             else:
                 model = self._train_sklearn(model, self.codeSnippetDs.get_all_data(model_type=model_type))
@@ -127,10 +134,11 @@ class ModelTrainer(object):
 
                 metrics = self._calc_metrics(y_pred_test, y_true_test)
 
-                train_results[self.names_models[model_type]] = {'metrics':metrics,'y_pred_test':y_pred_test.tolist(),'y_true_test':y_true_test.tolist()}
+                train_results[self.names_models[model_type]] = {'metrics':metrics}
+                predictions[self.names_models[model_type]]={'y_pred_test':y_pred_test,'y_true_test':y_true_test}
             logging.info(metrics)
         if persist_results:
             with open('train_results_{}_epochs.json'.format(str(nr_epochs)), 'w') as fp:
                 json.dump(train_results, fp)
 
-        return train_results
+        return train_results,predictions

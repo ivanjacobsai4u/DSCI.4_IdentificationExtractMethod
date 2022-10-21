@@ -35,7 +35,7 @@ for pair in model_pairs:
     odds_results[model_one + '_' + model_two]={'oddsratios':[],'pvalues':[]}
 
 for n in range(configs['statistics']['nr_iterations']):
-    train_results=model_trainer.train(nr_epochs=nr_epochs,persist_results=False)
+    _,train_results=model_trainer.train(nr_epochs=nr_epochs,persist_results=False)
     logging.info(train_results)
     for model_name in names_models.values():
         train_merge_results[model_name]['y_pred_test'].extend(train_results[model_name]['y_pred_test'])

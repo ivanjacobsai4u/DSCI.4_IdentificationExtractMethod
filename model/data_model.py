@@ -2,6 +2,8 @@ import pandas as pd
 import torch
 from torch.utils.data import Dataset, DataLoader
 import numpy as np
+from torchvision.transforms import transforms
+
 
 class CodeSnippetsDataset(Dataset):
 
@@ -22,14 +24,15 @@ class CodeSnippetsDataset(Dataset):
 
 
         g = conc_df.groupby('label')
-        conc_df=g.apply(lambda x: x.sample(g.size().min()).reset_index(drop=True))
+        conc_df=g.apply(lambda x: x.sample(g.size().max(),replace=True).reset_index(drop=True))
 
         self.x = conc_df.iloc[:, 0:78].values
         self.y = conc_df.iloc[:, 80].values
         self.x_train = torch.tensor(self.x, dtype=torch.float32)
+        #self.x_train = torch.nn.functional.normalize( self.x_train ,p=2.0,dim=-1)
         self.y_train = torch.tensor(self.y, dtype=torch.long)
     def get_all_data(self,model_type='cnn'):
-        if model_type=='cnn':
+        if model_type in ["cnn" ,'CNNCodeDuplExtResUnet','AttU_Net','CNNCodeDuplExtResUnetAtt']:
             return torch.tensor(self.x, dtype=torch.float32),torch.tensor(self.y, dtype=torch.long)
         else:
             return self.x,self.y

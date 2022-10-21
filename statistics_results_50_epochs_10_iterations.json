@@ -1,0 +1,362 @@
+{
+  "CNNCodeDuplExtResUnetAtt_Convolutional Neural Network": {
+    "model_1": "CNNCodeDuplExtResUnetAtt",
+    "model_2": "Convolutional Neural Network",
+    "model_pairs": [
+      "CNNCodeDuplExtResUnetAtt",
+      "Convolutional Neural Network"
+    ],
+    "chi-squared": 24065.46018614271,
+    "p-value": 0.0,
+    "oddsratio": 17.21,
+    "oddsratios": [
+      21.272495647637978,
+      22.474294558112884,
+      19.560115470223913,
+      22.17541592018593,
+      21.829860234070033,
+      17.20942508528744,
+      22.84087393693902,
+      18.54364069059684,
+      18.064906239185653,
+      18.75579109699906
+    ],
+    "pvalue": 0.0
+  },
+  "CNNCodeDuplExtResUnetAtt_Random Forest": {
+    "model_1": "CNNCodeDuplExtResUnetAtt",
+    "model_2": "Random Forest",
+    "model_pairs": [
+      "CNNCodeDuplExtResUnetAtt",
+      "Random Forest"
+    ],
+    "chi-squared": 25.86918952772269,
+    "p-value": 0.0,
+    "oddsratio": 5.55,
+    "oddsratios": [
+      5.744766614395951,
+      5.552023351393745,
+      7.0494574093361235,
+      6.845957445346345,
+      7.191834205063583,
+      7.579745156407544,
+      6.340127648854172,
+      5.675571248286621,
+      6.486542302967758,
+      5.8327328433341075
+    ],
+    "pvalue": 0.0
+  },
+  "CNNCodeDuplExtResUnetAtt_Support Vector Machine": {
+    "model_1": "CNNCodeDuplExtResUnetAtt",
+    "model_2": "Support Vector Machine",
+    "model_pairs": [
+      "CNNCodeDuplExtResUnetAtt",
+      "Support Vector Machine"
+    ],
+    "chi-squared": 837608.8484334059,
+    "p-value": 0.0,
+    "oddsratio": 1.39,
+    "oddsratios": [
+      2.516680251897663,
+      3.2061220438663196,
+      2.9176335478685176,
+      3.67939015119704,
+      2.9310504044452195,
+      2.8198283296308966,
+      1.3894971400425788,
+      1.969306357064643,
+      1.8377168222093563,
+      1.386861522635087
+    ],
+    "pvalue": 0.0
+  },
+  "CNNCodeDuplExtResUnetAtt_Naive Bayes": {
+    "model_1": "CNNCodeDuplExtResUnetAtt",
+    "model_2": "Naive Bayes",
+    "model_pairs": [
+      "CNNCodeDuplExtResUnetAtt",
+      "Naive Bayes"
+    ],
+    "chi-squared": 1101070.4259431874,
+    "p-value": 0.0,
+    "oddsratio": 1.01,
+    "oddsratios": [
+      1.2616459265623252,
+      1.3159880989571386,
+      1.2075502435079548,
+      1.156265675692092,
+      1.005925713474788,
+      1.2505849135699443,
+      1.0551425338030656,
+      1.1521527930456898,
+      1.2251400518363185,
+      1.187791597188565
+    ],
+    "pvalue": 0.0
+  },
+  "CNNCodeDuplExtResUnetAtt_Logistic Regression": {
+    "model_1": "CNNCodeDuplExtResUnetAtt",
+    "model_2": "Logistic Regression",
+    "model_pairs": [
+      "CNNCodeDuplExtResUnetAtt",
+      "Logistic Regression"
+    ],
+    "chi-squared": 784689.5789003561,
+    "p-value": 0.0,
+    "oddsratio": 2.27,
+    "oddsratios": [
+      3.3345525200319974,
+      3.009185808307147,
+      2.574566794189847,
+      2.5008633098133255,
+      2.2716016813728306,
+      2.464303550305871,
+      2.7525696162423063,
+      2.9109664493581917,
+      2.793438017671523,
+      3.298577786082483
+    ],
+    "pvalue": 0.0
+  },
+  "Convolutional Neural Network_Random Forest": {
+    "model_1": "Convolutional Neural Network",
+    "model_2": "Random Forest",
+    "model_pairs": [
+      "Convolutional Neural Network",
+      "Random Forest"
+    ],
+    "chi-squared": 15668.782828835172,
+    "p-value": 0.0,
+    "oddsratio": 4.86,
+    "oddsratios": [
+      5.8781141106023425,
+      6.28409696339566,
+      6.082788809942804,
+      5.160616293748759,
+      6.091965855564429,
+      4.864729891470895,
+      6.939203183747553,
+      6.599791862660297,
+      5.604884702609482,
+      6.947745425730235
+    ],
+    "pvalue": 0.0
+  },
+  "Convolutional Neural Network_Support Vector Machine": {
+    "model_1": "Convolutional Neural Network",
+    "model_2": "Support Vector Machine",
+    "model_pairs": [
+      "Convolutional Neural Network",
+      "Support Vector Machine"
+    ],
+    "chi-squared": 717186.9905794411,
+    "p-value": 0.0,
+    "oddsratio": 1.26,
+    "oddsratios": [
+      3.023687064249555,
+      4.367864383443422,
+      2.927902340426655,
+      4.576971263345647,
+      3.666472966957096,
+      2.9185365163682433,
+      1.9886301710712804,
+      3.2987763437241613,
+      1.2585931767799172,
+      2.4777800283551774
+    ],
+    "pvalue": 0.0
+  },
+  "Convolutional Neural Network_Naive Bayes": {
+    "model_1": "Convolutional Neural Network",
+    "model_2": "Naive Bayes",
+    "model_pairs": [
+      "Convolutional Neural Network",
+      "Naive Bayes"
+    ],
+    "chi-squared": 920276.9608150821,
+    "p-value": 0.0,
+    "oddsratio": 0.78,
+    "oddsratios": [
+      0.9364395016165179,
+      0.8370169306891755,
+      0.9337061620504341,
+      1.1378028262153739,
+      0.8047123794039338,
+      1.0130888326380134,
+      0.8373020121665111,
+      0.8456866226175184,
+      0.868668100386412,
+      0.7805575173652134
+    ],
+    "pvalue": 0.0
+  },
+  "Convolutional Neural Network_Logistic Regression": {
+    "model_1": "Convolutional Neural Network",
+    "model_2": "Logistic Regression",
+    "model_pairs": [
+      "Convolutional Neural Network",
+      "Logistic Regression"
+    ],
+    "chi-squared": 645368.4939495188,
+    "p-value": 0.0,
+    "oddsratio": 2.46,
+    "oddsratios": [
+      3.1208159394755706,
+      2.7155592069432473,
+      2.7586289161500805,
+      3.0323156535935825,
+      2.8834494991417037,
+      2.960896960572515,
+      2.4623082342835514,
+      2.6383952980587986,
+      2.496616073729028,
+      2.5085257933056035
+    ],
+    "pvalue": 0.0
+  },
+  "Random Forest_Support Vector Machine": {
+    "model_1": "Random Forest",
+    "model_2": "Support Vector Machine",
+    "model_pairs": [
+      "Random Forest",
+      "Support Vector Machine"
+    ],
+    "chi-squared": 828318.8337343289,
+    "p-value": 0.0,
+    "oddsratio": 0.1,
+    "oddsratios": [
+      5.561532428760323,
+      2.9892554013604804,
+      0.46081085371263647,
+      1.5670350283403078,
+      3.5233569959040416,
+      0.744136269606811,
+      62.53808389597399,
+      5.056866556815836,
+      0.09582795919521925,
+      18.734709339604745
+    ],
+    "pvalue": 0.0
+  },
+  "Random Forest_Naive Bayes": {
+    "model_1": "Random Forest",
+    "model_2": "Naive Bayes",
+    "model_pairs": [
+      "Random Forest",
+      "Naive Bayes"
+    ],
+    "chi-squared": 952043.55024382,
+    "p-value": 0.0,
+    "oddsratio": 0.18,
+    "oddsratios": [
+      0.17861643411842582,
+      0.17941064592272912,
+      0.1792399787123118,
+      0.18144001938425472,
+      0.17643292177957587,
+      0.18080796731467186,
+      0.17947201186628678,
+      0.17744765737264406,
+      0.18341240700523115,
+      0.18059760845469738
+    ],
+    "pvalue": 0.0
+  },
+  "Random Forest_Logistic Regression": {
+    "model_1": "Random Forest",
+    "model_2": "Logistic Regression",
+    "model_pairs": [
+      "Random Forest",
+      "Logistic Regression"
+    ],
+    "chi-squared": 678526.1842929824,
+    "p-value": 0.0,
+    "oddsratio": 0.83,
+    "oddsratios": [
+      0.839702666295739,
+      0.8530564997935348,
+      0.8341217762130597,
+      0.8557666940568921,
+      0.8509132673850237,
+      0.8481100010911016,
+      0.8507120904954135,
+      0.8559018966279883,
+      0.8492734956796691,
+      0.836116398179163
+    ],
+    "pvalue": 0.0
+  },
+  "Support Vector Machine_Naive Bayes": {
+    "model_1": "Support Vector Machine",
+    "model_2": "Naive Bayes",
+    "model_pairs": [
+      "Support Vector Machine",
+      "Naive Bayes"
+    ],
+    "chi-squared": 46241.65031256125,
+    "p-value": 0.0,
+    "oddsratio": 0.04,
+    "oddsratios": [
+      0.22510783833133338,
+      0.6073722433797392,
+      6.879100805278263,
+      2.577104770467837,
+      0.1546862306547532,
+      7.043046874797921,
+      0.038890943221100295,
+      0.1321927837677289,
+      22.494185574621866,
+      0.06567539261107219
+    ],
+    "pvalue": 0.0
+  },
+  "Support Vector Machine_Logistic Regression": {
+    "model_1": "Support Vector Machine",
+    "model_2": "Logistic Regression",
+    "model_pairs": [
+      "Support Vector Machine",
+      "Logistic Regression"
+    ],
+    "chi-squared": 3173.799042698902,
+    "p-value": 0.0,
+    "oddsratio": 1.1,
+    "oddsratios": [
+      3.1657440156595995,
+      5.79878190310985,
+      6.183974548942524,
+      7.3713184338445465,
+      3.2160072233899997,
+      5.535003984540318,
+      1.1028975963378465,
+      2.6250508565015926,
+      2.7972426875956176,
+      1.4628827734658505
+    ],
+    "pvalue": 0.0
+  },
+  "Naive Bayes_Logistic Regression": {
+    "model_1": "Naive Bayes",
+    "model_2": "Logistic Regression",
+    "model_pairs": [
+      "Naive Bayes",
+      "Logistic Regression"
+    ],
+    "chi-squared": 82095.93890515457,
+    "p-value": 0.0,
+    "oddsratio": 1.54,
+    "oddsratios": [
+      1.5409428758364037,
+      1.5409428758364037,
+      1.5409428758364037,
+      1.5409428758364037,
+      1.5409428758364037,
+      1.5409428758364037,
+      1.5409428758364037,
+      1.5409428758364037,
+      1.5409428758364037,
+      1.5409428758364037
+    ],
+    "pvalue": 0.0
+  }
+}
